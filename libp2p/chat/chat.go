@@ -45,10 +45,6 @@ func main() {
 
 	}
 
-	fmt.Print(sourcePort)
-	fmt.Print(dest)
-	fmt.Print(ctx)
-
 	var r io.Reader
 	if *debug {
 		r = mrand.New(mrand.NewSource(int64(*sourcePort)))
