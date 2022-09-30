@@ -33,3 +33,35 @@ func BlankIdentifier() {
 func threeValues() (int, int, float32) {
 	return 5, 6, 3.2
 }
+
+func Add(a, b int) {
+
+	fmt.Printf("The sum of %d and %d is: %d\n", a, b, a+b)
+}
+
+func Callback(y int, f func(int, int)) {
+	f(y, y) // this becomes Add(1, 2)
+}
+
+func A() {
+	fmt.Println("******************  AAAAAAAAAAAAAAAAA   ***********")
+}
+
+func B() {
+	fmt.Println("******************  BBBBBBBBBBBBBBBBB   ***********")
+}
+
+//******************  AAAAAAAAAAAAAAAAA   ***********
+//******************  BBBBBBBBBBBBBBBBB   ***********
+// types.A()
+// types.B()
+
+// 没有输出 因为主线程 执行完了 该线程还没有执行
+//go types.A()
+//go types.B()
+
+//正常输出
+//go types.A()
+//go types.B()
+//time.Sleep(1000 * 10)
+// 或者使用 select {}

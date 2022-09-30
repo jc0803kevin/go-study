@@ -20,4 +20,7 @@ func fmts() {
 
 	types.BlankIdentifier()
 
+	// 回调函数, 将一个函数作为参数 传入另外一个函数
+	types.Callback(1, types.Add)
+
 }
