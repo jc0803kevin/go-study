@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-study/types"
+	"github.com/jc0803kevin/go-study/types"
 )
 
 func main() {
