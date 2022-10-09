@@ -1,0 +1,18 @@
+
+// 在goland 使用proto 需要安装对应的protoc，protoc-gen-go
+// 在终端运行命令 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+// 会在gopath 目录下面生成一个 protoc-gen-go.exe
+// 如果提示不是内部命令 就将这个复制到 C:\Users\Administrator\go\bin 即可
+
+
+syntax = "proto3";
+
+option go_package = "./";
+
+message Student {
+
+    string name = 1;
+
+    string description = 2;
+
+}
