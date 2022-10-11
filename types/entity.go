@@ -5,3 +5,10 @@ type Student struct {
 	Name string
 	Age  int
 }
+
+
+type teacher struct {
+
+	Name string
+
+}

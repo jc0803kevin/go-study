@@ -65,3 +65,16 @@ func B() {
 //go types.B()
 //time.Sleep(1000 * 10)
 // 或者使用 select {}
+
+
+//定义一个构建函数
+func NewStudent(name string, age int) (stu *Student){
+
+	return &Student{Name:name, Age: age}
+
+}
+
+// 定义在包内 可见
+func NewTeacher(name string) *teacher  {
+	return &teacher{Name:name}
+}

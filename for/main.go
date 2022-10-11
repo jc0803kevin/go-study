@@ -7,9 +7,43 @@ import (
 
 func main() {
 
-	readData()
+	LABEL1()
 
 }
+
+func LABEL1()  {
+
+	LABEL1:
+		for i := 0; i <= 5; i++ {
+			for j := 0; j <= 5; j++ {
+				if j == 4 {
+					continue LABEL1
+				}
+				fmt.Printf("i is: %d, and j is: %d\n", i, j)
+			}
+		}
+
+}
+
+
+func for3()  {
+
+	//str := "G"
+	//for i:=0 ; i<5;i++ {
+	//	fmt.Println(str)
+	//	str += "G"
+	//}
+
+
+	for i := 1; i <= 5; i++ {
+		for j := 1; j <= i; j++ {
+			print("G")
+		}
+		println()
+	}
+
+}
+
 
 func for1() {
 
