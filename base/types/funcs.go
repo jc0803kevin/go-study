@@ -70,11 +70,11 @@ func B() {
 //定义一个构建函数
 func NewStudent(name string, age int) (stu *Student){
 
-	return &Student{Name:name, Age: age}
+	return &Student{Name: name, Age: age}
 
 }
 
 // 定义在包内 可见
-func NewTeacher(name string) *teacher  {
-	return &teacher{Name:name}
+func NewTeacher(name string) *teacher {
+	return &teacher{Name: name}
 }

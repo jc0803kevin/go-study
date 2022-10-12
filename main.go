@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/jc0803kevin/go-study/types"
+	"github.com/jc0803kevin/go-study/base/types"
 )
 
 func main() {
 
 	//fmts()
-
+	//
 	//readinput.FileInput()
 	//readinput.FileInput()
 	//readinput.CopyFile()
