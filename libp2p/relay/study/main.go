@@ -1,8 +1,8 @@
-package study
+package main
 
 func main() {
 
 
-	V2()
+	V4()
 	//V3()
 }

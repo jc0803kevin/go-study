@@ -306,6 +306,8 @@ func makeRandomNode(relay string) *Node {
 		libp2p.EnableRelay(),
 		libp2p.EnableAutoRelay(),
 		libp2p.ForceReachabilityPrivate(),
+
+		// 使用配置的中继节点
 		libp2p.StaticRelays([]peer.AddrInfo{*peerInfo}),
 		libp2p.EnableHolePunching(),
 	)

@@ -113,10 +113,16 @@ func AddHolePunchService( h host.Host) *holepunch.Service {
 }
 func makeRelayHost(port int) (*RelayServer,error) {
 	sourceMultiAddr, _ := multiaddr.NewMultiaddr(fmt.Sprintf("/ip4/0.0.0.0/tcp/%d", port))
+
+	// 指定 peerid
+	//priBytes , _ := hex.DecodeString("02c97dec1771eb564be5ab7f1a203d11c81f14dbae27fbdd2a4837f9e4843c3dab")
+	//priKey, _  := crypto.UnmarshalSecp256k1PrivateKey(priBytes)
+
 	h, err:= libp2p.New(
 		libp2p.ListenAddrs(sourceMultiAddr),
 		libp2p.DisableRelay(),
 		libp2p.EnableHolePunching(),
+		//libp2p.Identity(priKey),
 	)
 	_, err = relayv1.NewRelay(h)
 	if err != nil {

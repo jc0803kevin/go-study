@@ -1,5 +1,7 @@
 
 
+通过指定的中继，让在nat后面的两个节点进行通信
+
 参考
 https://github.com/zfunnily/hole-punching-go-libp2p
 https://zfunnily.github.io/2021/10/gop2pthree/
