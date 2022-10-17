@@ -6,11 +6,12 @@ require (
 	github.com/gdamore/tcell/v2 v2.5.3
 	github.com/go-basic/uuid v1.0.0
 	github.com/gogo/protobuf v1.3.2
+	github.com/ipfs/go-datastore v0.5.1
 	github.com/ipfs/go-log/v2 v2.5.1
 	github.com/libp2p/go-libp2p v0.22.0
 	github.com/libp2p/go-libp2p-core v0.20.1
+	github.com/libp2p/go-libp2p-kad-dht v0.18.0
 	github.com/libp2p/go-libp2p-pubsub v0.8.1
-	github.com/libp2p/go-libp2p-swarm v0.11.0
 	github.com/libp2p/go-reuseport v0.2.0
 	github.com/multiformats/go-multiaddr v0.7.0
 	github.com/mwitkow/go-proto-validators v0.3.2

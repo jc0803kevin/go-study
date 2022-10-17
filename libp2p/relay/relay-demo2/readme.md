@@ -120,3 +120,14 @@ kevin@DESKTOP-SMS02PU:/mnt/e/workspace/gowork/src/github.com/jc0803kevin/go-stud
 >
 
 ```
+
+* 完整中继地址:
+```shell script
+
+/ip4/192.168.23.146/tcp/54965/p2p/12D3KooWRVdVz2pAmgtVHR5NQz7wtLPfpFBu4gQ5iteyozsNbEct/p2p-circuit/p2p/12D3KooWLssNkgYsYnutWM6Ms7c9kZgNqkMo6Xn3wSK7SuYiU7Rg
+
+```
+
+12D3KooWRVdVz2pAmgtVHR5NQz7wtLPfpFBu4gQ5iteyozsNbEct 中继服务peer id
+/ip4/192.168.23.146/tcp/54965                        需要达到节点host
+12D3KooWLssNkgYsYnutWM6Ms7c9kZgNqkMo6Xn3wSK7SuYiU7Rg 需要到达的节点 peer id

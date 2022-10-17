@@ -184,6 +184,9 @@ func (n* Node)ConnectNode(nodePeerID string, nodeAddr string) {
 	//var address = nodeAddr +"/p2p/" + peerID.Pretty() + "/p2p-circuit"
 	//var address = nodeAddr +"/p2p/" + peerID.Pretty()
 	//var address = "/p2p/"+ peerID.Pretty()
+
+	log.Printf("完整中继地址: %s", address)
+
 	chatTargetAddr, err := multiaddr.NewMultiaddr(address)
 	if err != nil {
 		log.Println("chatTargetAddr is err")
@@ -316,6 +319,9 @@ func makeRandomNode(relay string) *Node {
 		log.Println(err.Error())
 		return nil
 	}
+
+	log.Printf("节点Host %s", h.Addrs()[0].String())
+
 	hps := AddHolePunchService(h)
 	if hps == nil { return nil}
 	return NewNode(h, hps)

@@ -1,6 +1,8 @@
 # go-ipfs 配置文件
 
 https://github.com/ipfs/kubo/blob/master/docs/config.md
+https://github.com/chinanf-boy/go-ipfs-zh
+
 
 go-ipfs 配置文件是一个 json 文档. 它在节点实例化时 读取一次,用于脱机命令或 启动守护程序. 在正在运行的守护程序上执行的命令不会在 **运行时** 读取配置文件.
 
