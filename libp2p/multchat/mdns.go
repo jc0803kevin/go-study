@@ -20,7 +20,7 @@ type discoveryNotifee struct {
 func (n *discoveryNotifee) HandlePeerFound(pi peer.AddrInfo) {
 	n.PeerChan <- pi
 
-	cr.JoinRoom(pi)
+	//cr.JoinRoom(pi)
 }
 
 func InitMdns(peerhost host.Host) chan peer.AddrInfo {

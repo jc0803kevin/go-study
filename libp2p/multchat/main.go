@@ -4,16 +4,12 @@ import (
 	"context"
 	"fmt"
 	"github.com/emicklei/go-restful"
-	"github.com/libp2p/go-libp2p-core/host"
 	"go.uber.org/zap"
 	"net/http"
 	"time"
 )
 
-var cr ChatRoom
-var self host.Host
-var cfg Config
-var ctx context.Context
+var node Node
 
 func main() {
 	logger, err := zap.NewDevelopment()
@@ -21,11 +17,17 @@ func main() {
 		panic(err)
 	}
 
-	ctx, _ = context.WithCancel(context.Background())
-	cfg = parseFlags()
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	cfg := parseFlags()
 
-	self = randomHost(cfg.p2pPort)
+	node.cfg = cfg
+	node.ctx = ctx
+	node.RoomMgr.rooms = make(map[string]*ChatRoom)
+
+	self := randomHost(cfg.p2pPort)
 	logger.Info("",zap.Any("My peer : ", self.Addrs()[0]))
+	node.self = self
 
 	// web api server
 	// 创建container，并注册路由
@@ -83,7 +85,7 @@ func register(container *restful.Container) {
 	//ws.Route(ws.GET("/setNickname").To(setNickname))
 	//ws.Route(ws.GET("/messgaeRecord").To(getMessgaeRecord))
 	//ws.Route(ws.GET("/rooms").To(getRooms))
-	ws.Route(ws.GET("/getPeers").To(getPeers))
+	//ws.Route(ws.GET("/getPeers").To(getPeers))
 
 	container.Add(ws)
 }
