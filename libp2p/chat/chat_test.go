@@ -9,6 +9,7 @@ import (
 	ic "github.com/libp2p/go-libp2p-core/crypto"
 )
 
+// https://github.com/libp2p/specs/blob/master/peer-ids/peer-ids.md
 // PeerID生成的过程：创建私钥 => 导出公钥 => hash函数 => 编码
 // bafzbeie5745rpv2m6tjyuugywy4d5ewrqgqqhfnf445he3omzpjbx5xqxe-- Peer ID (sha256) 编码为 CID ( inspect )。
 // QmYyQSo1c1Ym7orWxLYvCrM2EmxFTANf8wXmmE7DWjhx5N-- Peer ID (sha256) 编码为原始 base58btc 多哈希。

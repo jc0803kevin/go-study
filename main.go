@@ -2,17 +2,20 @@ package main
 
 import (
 	"fmt"
-	"github.com/jc0803kevin/go-study/readinput"
-	"github.com/jc0803kevin/go-study/types"
+	"github.com/jc0803kevin/go-study/base/types"
 )
 
 func main() {
 
 	//fmts()
-
-	readinput.FileInput()
+	//
+	//readinput.FileInput()
 	//readinput.FileInput()
 	//readinput.CopyFile()
+
+
+	//types.MyMaps()
+	//fmt.Println(types.NewTeacher("kevin").Name)
 
 }
 
@@ -29,3 +32,8 @@ func fmts() {
 	types.Callback(1, types.Add)
 
 }
+
+// 包外 不可见
+//func newTeacher(name string) *types.teacher  {
+//	return &teacher{Name:name}
+//}

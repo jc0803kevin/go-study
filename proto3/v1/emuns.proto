@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package mains;
+
+
+enum Status {
+
+    // 枚举的第一个元素 的值必须是 零
+    A  = 1;
+    B = 2;
+
+
+}
+
+// 可以通过将相同的值分配给不同的枚举常量来定义别名。为此，您需要将allow_alias选项设置为true
+enum EnumAllowingAlias {
+    option allow_alias = true;
+    EAA_UNSPECIFIED = 0;
+    EAA_STARTED = 1;
+    EAA_RUNNING = 1;
+    EAA_FINISHED = 2;
+  }
+  enum EnumNotAllowingAlias {
+    ENAA_UNSPECIFIED = 0;
+    ENAA_STARTED = 1;
+    // ENAA_RUNNING = 1;  // Uncommenting this line will cause a compile error inside Google and a warning message outside.
+    ENAA_FINISHED = 2;
+  }
